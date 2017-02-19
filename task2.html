@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <script src="js/profileData.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="task1.html">task #1</a>
+        <a href="task2.html">task #2</a>
+        <h1>task #2</h1>
+    </nav>
+
+    <script type="text/template" id="test">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <div class="profile">
+            <img class="avatar" src="<%= data[i].photo %>" alt="<%= data[i].alt %>">
+            <div class="info">
+                <h1 class="name"><%= data[i].name %></h1>
+                <p class="date"><%= data[i].dateOfBirth %></p>
+                <p class="instrument"><%= data[i].instrument %></p>
+            </div>
+        </div>
+        <% }; %>
+    </script>
+
+</body>
+</html>
